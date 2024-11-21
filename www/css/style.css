@@ -1,0 +1,215 @@
+/* CSS variable */
+:root {
+	--main-color: #384B70;
+	--secondary-color: #507687;
+	--light: #f8f9fa;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 60px;
+}
+
+body {
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: var(--light);
+	color: #333;
+}
+
+
+/* Header */
+header.navbar-container {
+	display: inline;
+}
+
+.navbar-container .jumbotron {
+	font-size: 16px;
+	padding: 100px;
+	background-color: var(--secondary-color);
+	background-image: url('https://storage.googleapis.com/rizkiutamafauzi-profile-app/assets/profile-background.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: var(--light);
+}
+
+.navbar-container nav {
+	background-color: var(--main-color);
+	padding: 5px 30px;
+
+	position: sticky;
+	top: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	z-index: 10;
+}
+
+.navbar-container nav a img.logo {
+	height: 40px;
+}
+
+.navbar-container nav ul {
+	padding-inline: 0.2rem;
+	display: flex;
+	align-items: center;
+
+	gap: 0.2rem;
+}
+
+.navbar-container nav ul.nav-mid {
+	flex-wrap: wrap;
+}
+
+.navbar-container nav ul li {
+	list-style-type: none;
+}
+
+.navbar-container nav ul li a {
+	padding: 0.5rem 1.5rem;
+	border-radius: 999px;
+	/* font-size: 1rem; */
+	text-decoration: none;
+
+	color: white;
+}
+
+.navbar-container nav ul li a:hover,
+.navbar-container nav ul li i:hover,
+.navbar-container nav ul.nav-right li img.avatar:hover {
+	background-color: #465f91;
+	color: var(--light);
+
+	transition: background-color 0.3s;
+}
+
+.navbar-container nav ul.nav-right {
+	padding: 0;
+	margin: 0;
+	gap: 0.5rem;
+}
+
+.navbar-container nav ul.nav-right li {
+	/* border: 1px red solid; */
+	display: flex;
+}
+
+.navbar-container nav ul.nav-right li i {
+	font-size: 1.7rem;
+	color: var(--light);
+
+	padding: 0.5rem 0.7rem;
+	border-radius: 999px;
+
+	cursor: pointer;
+}
+
+.navbar-container nav ul.nav-right li img.avatar {
+	width: 2.7rem;
+	height: 2.7rem;
+	border-radius: 50%;
+	border: 2px solid transparent;
+	outline: 1px solid var(--light);
+	outline-offset: -0.3rem;
+	padding: 0.3rem;
+	cursor: pointer;
+}
+
+.navbar-container nav ul.nav-right li.dropdown-btn {
+	display: none;
+}
+
+.navbar-container .dropdown-content {
+	display: none;
+}
+
+.dropdown-content ul li {
+	list-style-type: none;
+}
+
+
+/* Main Content */
+main {
+	padding: 20px;
+
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 1.5rem;
+}
+
+#content {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 1rem 2rem;
+}
+
+.card {
+	box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 16px;
+
+	padding: 20px;
+	padding-bottom: 40px;
+}
+
+.card header {
+	text-align: center;
+}
+
+.card section {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+.social-media {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.social-media a img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+
+/* My Profile */
+.profile {
+	flex: 1;
+}
+
+.profile img {
+	width: 200px;
+	border-radius: 16px;
+}
+
+
+/* My Story */
+.mystory {
+	flex: 1;
+}
+
+.mystory p {
+	text-align: center;
+}
+
+
+/* Footer */
+footer {
+	padding: 20px;
+	color: white;
+	background-color: var(--main-color);
+
+	text-align: center;
+	font-weight: bold;
+}
